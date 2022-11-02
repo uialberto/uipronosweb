@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/css/app.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - AppWeb</title>
+
+    @RenderSection("styles", required: false)
+
+</head>
+
+<body>
+
+    <header>
+        <div class="contenedor">
+            <nav class="menu">
+                <a href="#">Inicio</a>
+                <a href="#">Partidos</a>
+                <a href="#">Equipos</a>
+                @*<a href="#">Politica</a>*@
+                <a href="#">Iniciar Sesión / Registro</a>
+            </nav>
+            <div class="contenedor-texto">
+                <div class="texto">
+                    <h1 class="nombre">M22 Pronósticos</h1>
+                    <h2 class="profesion">FIFA WORLD CUP QATAR 2022</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+
+        <section class="acerca-de">
+
+            <div class="contenedor">
+
+                <div class="foto">
+                    <img src="~/assets/img/fifacupqatar.webp" alt="Alberto Baigorria - Software Developer" width="115px" height="115px">
+                </div>
+
+                <div class="texto">                    
+                    <p>
+                        Bienvenidos a M22 Pronósticos! Vive la emoción de la <br> <strong>Copa Mundial de Fútbol Qatar 2022</strong> <br> Realiza el Pronóstico de los Partidos Oficiales.
+                    </p>
+
+                    <input type="submit" class="boton" value="INICIAR PRONÓSTICOS">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="info-pronostico">
+            <div class="contenedor">                
+                @RenderBody()
+            </div>
+        </section>
+        
+    </section>
+
+    <footer>
+        <section class="info-footer">
+            <div class="contenedor">
+                <div class="texto">
+                    <p>Jugá en M22 Pronósticos con Responsabilidad. Todos los derechos reservados <br /> © 2022 Desarrollado por <strong><a rel="noreferrer noopener" href="https://uialberto.github.io/" target="_blank">Alberto Baigorria</a></strong>
+                    </p>
+                </div>
+                <div class="logo">                    
+                </div>
+            </div>
+        </section>
+        <section class="redes-sociales">
+            <div class="contenedor">
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a>
+                <a href="#" class="github"><i class="fa fa-github"></i></a>
+                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+        </section>
+
+    </footer>
+
+    @RenderSection("scripts", required: false)
+
+    <script src="~/assets/js/app.js"></script>
+
+
+</body>
+
+</html>
